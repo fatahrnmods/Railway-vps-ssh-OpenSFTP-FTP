@@ -8,7 +8,7 @@ RUN wget -O ngrok.zip https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-stable-linux-am
     && unzip ngrok.zip
 
 RUN echo "./ngrok config add-authtoken 2LwTiGqixdYcVOR8PqEW0t25Kne_7zQ7YNWqPc9dtd1LdkKh6 &&" >>/kali.sh \
-    && echo "./ngrok tcp --region=sg 22 &>/dev/null &" >>/kali.sh \
+    && echo "./ngrok tcp --region=jp 22 &>/dev/null &" >>/kali.sh \
     && echo 'mkdir -p /run/sshd' >>/kali.sh \
     && echo '/usr/sbin/sshd -D' >>/kali.sh \
     && echo 'echo "By Radhin Development"' >> /kali.sh
