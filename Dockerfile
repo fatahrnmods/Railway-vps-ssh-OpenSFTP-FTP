@@ -7,7 +7,7 @@ RUN apt-get update -y > /dev/null 2>&1 && apt-get upgrade -y > /dev/null 2>&1 &&
 RUN wget -O ngrok.zip https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-stable-linux-amd64.zip > /dev/null 2>&1 \
     && unzip ngrok.zip
 
-RUN echo "./ngrok authtoken 2LwTiGqixdYcVOR8PqEW0t25Kne_7zQ7YNWqPc9dtd1LdkKh6 &&" >>/kali.sh \
+RUN echo "./ngrok 2LwTiGqixdYcVOR8PqEW0t25Kne_7zQ7YNWqPc9dtd1LdkKh6 &&" >>/kali.sh \
     && echo "./ngrok tcp --region=sg 22 &>/dev/null &" >>/kali.sh \
     && echo 'mkdir -p /run/sshd' >>/kali.sh \
     && echo '/usr/sbin/sshd -D' >>/kali.sh \
